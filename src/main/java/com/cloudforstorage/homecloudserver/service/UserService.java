@@ -24,14 +24,11 @@ public class UserService implements UserDetailsService {
     @Autowired
     UserRepository userRepository;
 
-
-
     Logger logger = LoggerFactory.getLogger(UserService.class);
-
     /**
      *
-     * @param username
-     * @return
+     * @param username username to be searched
+     * @return returns UserBean Object
      * @throws UsernameNotFoundException
      */
     @Override
@@ -43,14 +40,11 @@ public class UserService implements UserDetailsService {
         }
         logger.info("Returned userbean for authentication");
         return new UserBean(userEntity);
-
     }
-
-
     /**
      *
-     * @param signUpRequest
-     * @return UserBean
+     * @param signUpRequest  Username, password, email, ....(add any if changed in future)
+     * @return UserBean return JWT and registered user details
      *Takes the SignUpRequest and save it to repository.
      */
     public UserBean registerUser(SignUpRequest signUpRequest) {

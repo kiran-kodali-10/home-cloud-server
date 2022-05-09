@@ -8,6 +8,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * UserBean class to implement UserDetails for spring security
+ */
 public class UserBean implements UserDetails {
 
     private UserEntity user;

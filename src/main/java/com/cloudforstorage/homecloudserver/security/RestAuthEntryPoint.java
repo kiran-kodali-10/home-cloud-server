@@ -11,6 +11,16 @@ import java.io.IOException;
 
 @Component
 public class RestAuthEntryPoint implements AuthenticationEntryPoint {
+    /**
+     *
+     * @param request request object from client
+     * @param response response object from client
+     * @param authException AuthenticationException Object to get error messages
+     * @throws IOException
+     * @throws ServletException
+     *
+     * Throws error if there's any invalid request
+     */
     @Override
     public void commence(HttpServletRequest request,
                          HttpServletResponse response,

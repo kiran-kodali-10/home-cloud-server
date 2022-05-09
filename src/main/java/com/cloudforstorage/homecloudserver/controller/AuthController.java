@@ -34,7 +34,6 @@ public class AuthController {
     UserService userService;
 
     Logger logger = LoggerFactory.getLogger(AuthController.class);
-
     /**
      *
      * @param loginRequest
@@ -61,7 +60,6 @@ public class AuthController {
         loginResponse.setJwtToken(jwt);
         return ResponseEntity.ok(loginResponse);
     }
-
     /**
      *
      * @param signUpRequest
